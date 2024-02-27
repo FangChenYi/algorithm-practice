@@ -92,11 +92,13 @@ class PriorityQueue {
 
 let pq = new PriorityQueue();
 pq.enqueue("Eat", 4);
-pq.enqueue("Sleep", 3);
+pq.enqueue("Sleep", 2);
 pq.enqueue("Learn", 6);
 pq.enqueue("Shopee", 5);
-pq.enqueue("Read", 2);
+pq.enqueue("Read", 8);
 pq.enqueue("Play", 1);
+
+console.log(pq);
 
 while (pq.arr.length >= 1) {
   let task = pq.dequeue();
