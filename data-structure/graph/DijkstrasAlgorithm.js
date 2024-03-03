@@ -85,8 +85,8 @@ class MinHeap {
     }
 
     // swap two nodes
-    let temp = this.values.pop();
-    this.values.push(this.values[0]);
+    let temp = this.values[this.values.length - 1];
+    this.values[this.values.length - 1] = this.values[0];
     this.values[0] = temp;
     let removedNode = this.values.pop();
 
@@ -181,10 +181,10 @@ function Dijkstra(node) {
   }
 }
 
-Dijkstra(A);
+Dijkstra(F);
 console.log("A's information");
 console.log(A.distanceFromStartNode);
-console.log(A.previous);
+console.log(A.previous.value);
 console.log("B's Info");
 console.log(B.distanceFromStartNode);
 console.log(B.previous.value);
@@ -199,4 +199,4 @@ console.log(E.distanceFromStartNode);
 console.log(E.previous.value);
 console.log("F's Info");
 console.log(F.distanceFromStartNode);
-console.log(F.previous.value);
+console.log(F.previous);
